@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: "Public Sans", sans-serif;
+    }
+}
+
+@layer components {
+    .nav-social {
+        @apply text-white hover:opacity-60 transition-opacity duration-300 w-12 h-12 flex justify-center items-center border-white
+    }
+
+    .nav-link {
+        @apply font-roboto font-medium text-white hover:opacity-60 text-base flex justify-center items-center h-14 px-5 transition-opacity duration-300
+    }
+
+    .cta-btn {
+        @apply bg-cta rounded-md h-11 flex justify-center items-center px-4 lg:mr-4 text-white text-lg font-extrabold hover:-translate-y-1 transition-transform duration-300
+    }
+
+    .form-input {
+        @apply w-full font-normal text-base border rounded-md py-2 lg:py-4 border-cta px-3 pl-10 text-paragraph
+    }
+
+    .form-btn {
+        @apply inline-block px-7 py-3 font-bold font-roboto text-lg bg-cta rounded-lg text-white hover:-translate-y-1 transition-transform duration-300
+    }
+
+    .footer-link {
+        @apply font-roboto font-normal text-base text-heading hover:opacity-60 transition-opacity duration-300
+    }
+
+    .copyright-link {
+        @apply font-roboto font-semibold text-base text-white hover:opacity-60 transition-opacity duration-300
+    }
+
+    .offer-item {
+        @apply lg:col-span-3 md:col-span-6 flex flex-col items-center gap-y-4 hover:shadow-lg dark:hover:shadow-dark-sm hover:border-b-4 border-heading transition-all duration-300 py-3
+    }
+}
+
+@layer utilities {
+    .form {
+        background: url(/form-bg.jpg)no-repeat center / cover;
+    }
+}
